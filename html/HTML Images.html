@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!--<style>
+        img {
+            width: 50px; height: 50px;  
+            float: left;
+        }
+    </style>-->
+</head>
+<body> <!--style="background-image:url(https://i.etsystatic.com/10773363/r/il/3a32ce/1447711948/il_570xN.1447711948_dge7.jpg)">
+    
+    
+    <img alt="This is a bag" 
+    width="500" height="500"
+    src="https://herschel.ca/content/dam/herschel/products/10142/10142-00155-OS_01.jpg.sthumbnails.1000.1250.jpg">
+
+    <img src="https://i.etsystatic.com/12450560/r/il/8964b5/912765500/il_570xN.912765500_n2tr.jpg"
+    ></image>
+
+    <h2>Image Map</h2>
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Worlplace" usemap="#workmap"
+    style="width: 500px; height:500px">
+    <map name="workmap">
+        <area shape="rect" coords="34, 44, 270, 350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290, 170, 333, 250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+        <area shape="circle" coords="337, 300, 44" alt="Coffee" href="https://www.w3schools.com/html/coffee.htm">
+    </map>
+    -->
+
+    <h2>Picture element</h2>
+    <picture>
+        <source media="(min-width : 650px)" srcset="https://www.w3schools.com/html/workplace.jpg">
+            <source media="(min-width: 440px)" srcset="https://herschel.ca/content/dam/herschel/products/10142/10142-00155-OS_01.jpg.sthumbnails.1000.1250.jpg"> 
+                <img src="https://i.etsystatic.com/12450560/r/il/8964b5/912765500/il_570xN.912765500_n2tr.jpg" alt="phone" style="width:auto;">
+    </picture>
+</body>
+</html>
