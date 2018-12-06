@@ -1,0 +1,76 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!--
+    <style>
+        table, td, th {
+            border:1px solid black;
+        }
+        td, th {
+            padding: 19px; 
+        }
+        th {
+            text-align: left;
+        }
+        table {
+            border-spacing: 10px; 
+        }
+    </style>-->    
+    <style>
+        table#t01 {
+            width:100%; 
+            background-color: aqua; 
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color:blue; 
+        }
+        table#t01 th {
+            color:white; 
+            background-color:black; 
+        }
+    </style>
+</head>
+<body>
+    <table id="t01" style="width:100%; ">
+        <caption>Caption setting</caption>
+    <tr>
+        <th>Firstname</th>
+        <th colspan="5">Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jil</td>
+        <td>Smith</td>
+        <td>44</td>
+    </tr>
+    <tr>
+        <td>Ev</td>
+        <td>Jackson</td>
+        <td>111</td>
+    </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Name: </th>
+            <td>Bill gates</td>            
+        </tr>
+        <tr>
+            <th rowspan="3">Telephone</th>
+            <td>1111111</td>
+        </tr>
+        <tr>
+            <td>22222</th>
+        </tr>
+        <tr>
+            <td>33333</td>
+        </tr>
+    </table>
+</body>
+</html>
