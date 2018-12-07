@@ -7,12 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <style>
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color:aqua; 
+        }
+        li a {
+            display: block; 
+            color: white; 
+            text-align: center; 
+            padding: 16px; 
+            text-decoration: none; 
+        }
+        li a:hover {
+            background-color: blueviolet; 
+        }
+    </style>
 </head>
 <body>
-    <ul>
+    <ul style="list-style-type: square">
         <li>coffee</li>
         <li>tea</li>
         <li>milk</li>
+    </ul>
+
+    <ol type="i">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>milk</dt>
+        <dd>-white cold drink</dd>
+    </dl>
+
+    <ul style="list-style: square">
+        <li>Coffee</li>
+        <li>Tea</li>
+            <ul style="list-style-type:georgian">
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ul>
+        <li>Milk</li>
+    </ul>
+
+    <ol start="111">
+        <li>Coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ol>
+
+    <ul>
+        <li><a href="#home">HOME</a></li>
     </ul>
 </body>
 </html>
