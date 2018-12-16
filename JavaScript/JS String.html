@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS String</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <p id="str">test</p>
+
+        <script>
+    
+            function displayStr () {
+                var x = "this is a \
+                special \"string\""; 
+                return x.concat("badddd"); 
+            }
+
+            function displayStrLength() {
+                var x = "this is a special string"; 
+                return x.length; 
+            }
+
+            var str = "This is a special string to display. "
+            var str2 = "    HELLO!     "
+    
+            // document.getElementById("str").innerHTML=displayStr(); 
+
+            document.writeln(str.indexOf('is'));
+            document.writeln(str.lastIndexOf('is a')); 
+            document.writeln(str.search("is a")); document.write(";"); 
+            document.writeln(str.slice(22, 26)); document.write(";"); 
+            document.write(str.slice(-5, -2)); document.write(";"); 
+            document.write(str.slice(26)); document.write(";");
+            document.writeln(str.substring(22, 26)); document.write(";"); 
+            document.write(str.substr(22, 2)); document.write(";");
+            document.write(str.replace(/STRING/i, "hahaha")); 
+            document.write(str.concat("...", str2)); 
+            document.write(str2.trim()); document.write(";"); 
+            document.write(str.charAt(2)); 
+
+
+            </script>       
+
+</body>
+</html>

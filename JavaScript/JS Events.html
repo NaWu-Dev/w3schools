@@ -1,0 +1,27 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>JS Evenet</h1>
+    <p id="demo">Demo</p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is</button>
+
+    <button onclick="this.innerHTML=Date()">The time is</button>
+
+    <button onclick="myFunction()">Call function</button>
+
+    <script>
+        function myFunction() {
+            this.innerHTML=Date(); 
+            document.getElementById('demo').innerHTML=Date()
+        }
+    </script>
+</body>
+</html>
