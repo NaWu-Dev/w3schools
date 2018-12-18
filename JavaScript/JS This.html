@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JS this keyword</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script></script>
 </head>
 <body>
     <p>this in a method, this refer to "owner" of the method. </p>
@@ -60,6 +60,35 @@
                 }
             };
             document.write(person.myFunction()); 
+    </script>
+    <hr>
+    <p>Debuging</p>
+    <script>
+        a = 5; 
+        b = 4; 
+        c = a + b; 
+        console.log(c); 
+    </script>
+    <hr>
+    <p>Delay Javascript loading</p>
+    <script>
+        window.onload = function() {
+            var element = document.createElement("script"); 
+            element.src = "myScript.js"; 
+            document.body.appendChild(element); 
+        }
+    </script>
+    <hr>
+    <p>JSON</p>
+    <script>
+        var text = '{ "employees" : [' + 
+        '{ "firstName":"John" , "lastName":"Doe" }, ' + 
+        '{ "firstName":"Anna" , "lastName":"Smith" }, ' + 
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]} '; 
+
+        var obj = JSON.parse(text); 
+
+        document.write(obj.employees[1].firstName); 
     </script>
 </body>
 </html>
