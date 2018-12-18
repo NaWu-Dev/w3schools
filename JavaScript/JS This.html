@@ -1,0 +1,65 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS this keyword</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <p>this in a method, this refer to "owner" of the method. </p>
+    <script>
+        var person = {
+            firstName: "John", 
+            lastName: "Doe", 
+            id: 3333, 
+            fullName : function () {
+                return this.firstName + " " + this.lastName; 
+            }
+        };
+        document.write(person.fullName()); 
+    </script>
+    <hr>
+    <p>This used alone, this refer to Global object. </p>
+    <script> 
+        "use strict"
+        var x = this; 
+        document.write(x); 
+    </script>
+    <hr>
+    <p>This in a function, this refer to the owner of the function. </p>
+    <script>
+        function myFunction() {
+            return this; 
+        }
+        document.write(myFunction()); 
+    </script>
+    <br>
+    <p>This in a strict mode function, this is undefined. </p>
+    <script>
+        "use strict"
+        function myFunction() {
+            return this; 
+        }
+        document.write(myFunction()); 
+    </script>
+    <hr>
+    <p>In HTML event handlers, this refer to HTML element that receive the event. </p>
+    <button onclick="this.style.display='none'">Click to remove me</button>
+    <hr>
+    <p>In object method binding, this refer to related object. </p>
+    <script> 
+            var person = {
+                firstName: "John", 
+                lastName: "Doe", 
+                id: 3333, 
+                myFunction : function() {
+                    return this; 
+                }
+            };
+            document.write(person.myFunction()); 
+    </script>
+</body>
+</html>
