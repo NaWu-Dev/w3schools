@@ -1,0 +1,183 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="main.js"></script>
+    <style>
+        body {
+            background-color: lightblue; 
+        }
+        body {
+            /*background-image: url("test.jpg");
+            background-repeat: no-repeat;
+            background-position: right top; */
+            background: lightblue url("test.jpg") no-repeat right top; 
+        }
+        p.one {
+            border-style: solid dotted; 
+            border-width: 1px 10px 20px 30px; 
+            border-color: red green blue yellow; 
+        }
+        p.two {
+            border: 10px solid rebeccapurple; 
+            margin: inherit; 
+            width: 50%; 
+            height: 200px; 
+        }
+        p.three {
+            border: 2px solid red; 
+            border-radius: 5px; 
+            margin: 100px; 
+            padding: 25px; 
+            box-sizing: border-box; 
+        }
+        p.text {
+            color: green;
+            text-align: justify; 
+            text-decoration: overline; 
+            text-transform: capitalize; 
+            text-indent: 50px; 
+            letter-spacing: 3px; 
+            direction: rtl;
+            word-spacing: 10px; 
+            font-family: 'Times New Roman', Times, serif; 
+            font-style: italic; 
+            font-size: 20px; 
+            font-weight: bold; 
+            font-variant: small-caps; 
+        }
+        a {
+            color:hotpink; 
+        }
+        a:link {color: red; }
+        a:visited {color:green; }
+        a:hover {color:hotpink; }
+        a:active {color:blue; }
+        ul {
+            list-style-type: circle; 
+            list-style-position: outside; 
+        }
+        ol {
+            list-style-type: lower-alpha; 
+            list-style-position: inside; 
+            background: blue; 
+        }
+        table, td, tr, th{
+            border: solid 1px black; 
+            border-collapse: collapse; 
+        }
+        table {
+            width: 100%;
+        }
+        th {
+            height: 50px; 
+            text-align: left; 
+        }
+        td {
+            height: 50px; 
+            vertical-align: bottom; 
+        }
+        th, td {
+            padding: 15px; 
+            border-bottom: 1px solid #ddd; 
+        }
+        tr:nth-child(even) {
+            background-color:burlywood; 
+        }
+        img {
+            float: right; 
+        }
+        * {
+            box-sizing: border-box; 
+        }
+        .box {
+            float: left;
+            width: 33%; 
+            padding: 50px; 
+        }
+        .img-container {
+            float: left; 
+            width: 33%; 
+            padding: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: dodgerblue">Background color</h1>
+    <p style="background-color:tomato">Lorem ipsasdg sdjjt darag djaksef</p>
+    <hr>
+    <h1 style="color:teal">Text Color</h1>
+    <hr>
+    <h1>Border, Margin, Padding, Height/width</h1>
+    <p class="one">boder display</p>
+    <p class="two">border display haha</p>
+    <p class="three">Border display dkakd</p>
+    <hr>
+    <h1>Text</h1>
+    <p class="text">adsjfaoipehf; adbfkfd;j a;kgfabsdf</p>
+    <hr>
+    <h1>Icons</h1>
+    <i class="fa fa-cloud"></i>
+    <h1>Link</h1>
+    <a href="www.google.com">Google.com</a>
+    <h1>Lists</h1>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ul>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ol>
+    <hr>
+    <h1>Table</h1>
+    <table>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Griffin</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Griffin</td>
+        </tr>
+      </table>
+      <hr>
+      <h1>Float</h1>
+      <p><img src="test.jpg" alt="Kaka" width="100px" height="100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fr</p>
+
+    <h2>Grid of Boxes</h2>
+    <p>Float boxes side by side:</p>
+    <div class="clearfix">
+    <div class="box" style="background-color:#bbb">
+    <p>Some text inside the box.</p>
+    </div>
+    <div class="box" style="background-color:#ccc">
+    <p>Some text inside the box.</p>
+    </div>
+    <div class="box" style="background-color:#ddd">
+    <p>Some text inside the box.</p>
+    </div>
+    </div>
+    <div class="clearfix">
+      <div class="img-container">
+      <img src="test.jpg" alt="Italy" style="width:100%">
+      </div>
+      <div class="img-container">
+      <img src="test.jpg" alt="Forest" style="width:100%">
+      </div>
+      <div class="img-container">
+      <img src="test.jpg" alt="Mountains" style="width:100%">
+      </div>
+    </div>
+</body>
+</html>
