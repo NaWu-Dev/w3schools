@@ -1,0 +1,38 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script src=""></script>
+    <style>
+        div.gallery {
+            border: 1px solid gray; 
+            margin: 5px; 
+            width: 180px; 
+            float: left;
+        }
+        div.gallery img {
+            width: 100%; 
+            height: auto; 
+        }
+        div.gallery:hover {
+            border: 5px solid red; 
+        }
+        div.desc {
+            padding: 15px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <a href="test.jpg">
+            <img src="test.jpg" alt="Image display" width="300" height="300" >            
+        </a>
+        <div class="desc">Description of this image</div>
+    </div>
+</body>
+</html>

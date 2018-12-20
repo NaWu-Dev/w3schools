@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Attribute Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src=""></script>
+    <style>
+        a[target] {
+            background-color: yellow; 
+        }
+        a[target=_blank] {
+            border: 1px solid black; 
+        }
+        [title~=flower] {
+            border: 5px solid yellow; 
+        }
+        [class*=op] {
+            background: yellow; 
+        }
+    </style>
+</head>
+<body>
+    
+<p>The links with a target attribute gets a yellow background:</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+<p><b>Note:</b> For [<i>attribute</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+
+<hr>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+<img src="test.jpg" title="klematis flower" width="150" height="113">
+<img src="test.jpg" title="flower bottom-img" width="224" height="162">
+<img src="test.jpg" title="tree bottom-intro" width="200" height="358">
+<p class="top-text">Hello world!</p>
+<p class="topcontent">Are you learning CSS?</p>
+</body>
+</html>
