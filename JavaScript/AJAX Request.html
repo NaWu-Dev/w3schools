@@ -1,0 +1,32 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AJAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script src=""></script>
+</head>
+<body>
+    <h2>The XML HttpRequest Object</h2>
+    <button type="button" onclick="loadDoc()">Request data</button>
+    <p id="demo"></p>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest(); 
+            // xhttp.onreadystatechange = function () {
+            //     if (this.readyState == 4 && this.status == 200) {
+            //         document.getElementById("demo").innerHTML = this.responseText; 
+            //     }
+            // }; 
+            xhttp.open("GET", "test.json", true); 
+            xhttp.onload = function () {
+                var tempData = JSON.parse(xhttp.responseText); 
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }; 
+            xhttp.send(); 
+        }
+    </script>
+</body>
+</html>

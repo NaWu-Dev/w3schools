@@ -1,0 +1,40 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script src="">
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value; 
+            if (x == "") {
+                alert ("Name should be filled out. ")
+                return false; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()" method="POST">
+        Name: <input type="text" name="fname">
+        <input type="submit" name="Submit">
+    </form>
+
+    <input type="number" id="id1" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var inpObj = document.getElementById("id1"); 
+            // if (!inpObj.checkValidity() ) {
+            //     document.getElementById("demo").innerHTML = inpObj.validationMessage; 
+            // }
+            if (!inpObj.validity.rangeOverflow) {
+                document.getElementById("demo").innerHTML = "Value too large. "; 
+            }
+        }
+    </script>
+</body>
+</html>
