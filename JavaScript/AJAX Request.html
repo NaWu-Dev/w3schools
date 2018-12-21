@@ -10,22 +10,31 @@
 </head>
 <body>
     <h2>The XML HttpRequest Object</h2>
-    <button type="button" onclick="loadDoc()">Request data</button>
-    <p id="demo"></p>
+    <button type="button" onclick="loadDoc()" id="btn">Request data</button>
+    <div id="animal-info"></div>
     <script>
+        var pageCounter = 1; 
+        var animalContainer = document.getElementById("animal-info"); 
         function loadDoc() {
             var xhttp = new XMLHttpRequest(); 
-            // xhttp.onreadystatechange = function () {
-            //     if (this.readyState == 4 && this.status == 200) {
-            //         document.getElementById("demo").innerHTML = this.responseText; 
-            //     }
-            // }; 
-            xhttp.open("GET", "test.json", true); 
+            xhttp.open("GET", "https://learnwebcode.github.io/json-example/animals-"+pageCounter+ ".json", true); 
             xhttp.onload = function () {
-                var tempData = JSON.parse(xhttp.responseText); 
-                document.getElementById("demo").innerHTML = xhttp.responseText;
+                var tempData = JSON.parse(xhttp.responseText);
+                renderHTML(tempData); 
             }; 
             xhttp.send(); 
+            pageCounter++; 
+            if (pageCounter > 3) {
+                document.getElementById("btn").hidden; 
+            }
+        }
+
+        function renderHTML(data) {
+            var htmlString = "";
+            for (i = 0; i < data.length; i++) {
+                htmlString += "<p>" + data[i].name + "</p>"; 
+            }
+            animalContainer.insertAdjacentHTML('beforeend', htmlString); 
         }
     </script>
 </body>
